@@ -1,0 +1,9 @@
+{
+	"name": "adf-logi-dev-eus",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "818bf17c-d858-4388-8848-d7505efc2d40",
+		"tenantId": "d1bba59c-01bd-4f3c-87b7-899a522c0bf9"
+	}
+}
