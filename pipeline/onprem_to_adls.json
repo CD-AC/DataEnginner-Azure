@@ -36,7 +36,7 @@
 								"source": {
 									"type": "SqlServerSource",
 									"sqlReaderQuery": {
-										"value": "@{concat('SELECT * FROM ', item().SchemaName,'.',item().TableName)}\n",
+										"value": "@if(equals(item().TableName, 'Employee'),\n    'SELECT BusinessEntityID, NationalIDNumber, LoginID, \n            OrganizationLevel, JobTitle, BirthDate, MaritalStatus, \n            Gender, HireDate, SalariedFlag, VacationHours, \n            SickLeaveHours, CurrentFlag, rowguid, ModifiedDate \n     FROM HumanResources.Employee',\n    concat('SELECT * FROM ', item().SchemaName, '.', item().TableName)\n)\n",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
